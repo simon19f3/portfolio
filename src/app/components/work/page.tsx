@@ -9,6 +9,7 @@ interface WorkItem {
   name: string;
   description: string;
   link: string;
+  dir:string;
 }
 
 function Work() {
@@ -17,21 +18,25 @@ function Work() {
       name: 'Employee Hierarchy Management System',
       description: 'Employee hierarchy system with organizational visualization, role management, and responsive profile tracking using Next.js.',
       link: 'https://organization-s-employee-hierarchy.vercel.app/',
+      dir:'/employee.jpg'
     },
     {
       name: 'Mini E-commerce Product Catalog',
       description: 'A responsive e-commerce frontend built with Next.js and TypeScript. It delivers a dynamic user experience with product filtering, cart management, and smooth animations.',
       link: 'https://mini-ecommerce-iklvwk434-simon19f3s-projects.vercel.app/',
+      dir:'/e-commerce.jpeg'
     },
     {
       name: 'Real-Time-Weather-Dashboard',
       description: 'Real-time Chat App: Full-stack application built with Node.js backend and React frontend using WebSockets for instant messaging. Supports multiple users, online status, and maintains last 50 messages in memory.',
       link: 'https://github.com/simon19f3/Real-Time-Chat-Dashboard',
+      dir:'/weather.jpeg'
     },
     {
       name: 'Payment Request System',
       description: 'A backend service for payment request management with granular access control. Features role-based permissions for admin and superadmin tiers, built using Express.js.',
       link: 'https://github.com/simon19f3/Payment-Approval-API',
+      dir:'/paymen.jpeg'
     },
   ];
 
@@ -55,7 +60,7 @@ function Work() {
             {/* Image Container */}
             <div className="relative h-40 sm:h-44 md:h-48 lg:h-52 xl:h-56 w-full overflow-hidden">
               <Image
-                src="/1611723379.webp"
+                src={work.dir}
                 alt={work.name}
                 width={500}
                 height={500}
